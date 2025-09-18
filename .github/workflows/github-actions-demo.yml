@@ -13,8 +13,8 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: "Push to ${{ github.repository }}"
-          to: "<david,nikolajev07@gmail.com>"
-          from: "david.nikolajev07@gmail.com"
+          to: ${{ secrets.MAIL_USERNAME }}
+          from: ${{ secrets.MAIL_USERNAME }}
           secure: true
           body: |
             New push in repository: ${{ github.repository }}
